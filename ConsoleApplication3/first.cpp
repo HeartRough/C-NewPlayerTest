@@ -23,7 +23,13 @@ int main() {
 		cout << 5 + rand() % 11 << "\t" << endl;
 		cout << random(5, 15) << endl;
 	}
+	*//*
+	int n = 0;
+	int m = 1;
+	while (n++ <= 2) {
+		m++;
+	}
+	cout << n << endl;
 	*/
-
 }
 
