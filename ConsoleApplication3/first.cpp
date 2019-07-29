@@ -1,5 +1,15 @@
 #include "pch.h"
 using namespace std;
+//类的声明，对象的引用
+class object {
+public:
+	int a;
+	int b;
+public:
+	void out() {
+		cout << a << "\t" << b << endl;
+	}
+};
 
 int main() {
 	//字符串的输入输出会有异常
@@ -31,5 +41,16 @@ int main() {
 	}
 	cout << n << endl;
 	*/
+	/*
+	object a;
+	a.a = 1;
+	a.b = 2;
+	a.out();
+	object *b;
+	b->a = 3;
+	b->b = 4;
+	b->out();
+	*/
 }
+
 
