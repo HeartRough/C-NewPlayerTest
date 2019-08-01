@@ -1,6 +1,7 @@
 #include "pch.h"
-using namespace std;
+
 //类的声明，对象的引用
+/*
 class object {
 public:
 	int a;
@@ -10,6 +11,7 @@ public:
 		cout << a << "\t" << b << endl;
 	}
 };
+*/
 
 int main() {
 	//字符串的输入输出会有异常
