@@ -1,2 +1,3 @@
-﻿  more.cpp
+﻿  ShuZu.cpp
+d:\c\consoleapplication3\c-newplayertest\consoleapplication3\shuzu.cpp(5): warning C4101: “num”: 未引用的局部变量
   ConsoleApplication3.vcxproj -> D:\C\ConsoleApplication3\C-NewPlayerTest\ConsoleApplication3\x64\Debug\ConsoleApplication3.exe
