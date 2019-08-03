@@ -1,5 +1,4 @@
 #include "pch.h"
-
 int main() {
 	/*
 	const int N = 5;
@@ -51,8 +50,7 @@ int main() {
 
 
 
-
-	
+	/*
 	//最小回文的判断
 	//https://www.felix021.com/blog/read.php?2040
 	char str[] = "adada";
@@ -65,5 +63,5 @@ int main() {
 			cout << "Yes"<<endl;
 		}
 	}
-	
+	*/
 }
