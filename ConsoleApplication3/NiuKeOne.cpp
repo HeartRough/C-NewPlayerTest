@@ -29,6 +29,31 @@ int main() {
 	cout << *a<<endl;
 	cout << a[p - a];//输出结果都是1*/
 
-
-	
+	//vector
+	vector<int> vecInt;
+	for (int i = 0; i < 10;i++) {
+		vecInt.push_back(2*i+1);
+	}
+	vector<int>::iterator it;
+	cout << *vecInt.begin() << endl;
+	cout << *(vecInt.end()-1)<< endl;
+	cout << ">>>>";
+	for (it = vecInt.begin(); it != vecInt.end(); ++it) {
+		cout << *it<<"\t";
+	}
+	cout << endl;
+	reverse(vecInt.begin(),vecInt.end());
+	for (it = vecInt.begin(); it != vecInt.end(); ++it) {
+		cout << *it << "\t";
+	}
+	cout << endl;
+	sort(vecInt.begin(), vecInt.end());
+	for (it = vecInt.begin(); it != vecInt.end(); ++it) {
+		cout << *it << "\t";
+	}
+	cout << endl;
+	vecInt.resize(20);
+	for (it = vecInt.begin(); it != vecInt.end(); ++it) {
+		cout << *it << "\t";
+	}
 }
