@@ -23,7 +23,7 @@
     <ClCompile Include="pch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="NiuKeOne.cpp">
+    <ClCompile Include="ZhiZhen.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
