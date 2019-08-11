@@ -1,5 +1,5 @@
-#include "pch.h"
-
+ï»¿#include "pch.h"
+template <typename T> void sort(T [], int);
 //int main() {
 //	/*
 //	char c = 'c';
@@ -10,8 +10,128 @@
 //	cout << voidptr << endl;
 //	cout << *cptr << endl;
 //	cout << *voidptr << endl;
-//	//voidÖ¸ÏòµÄÊı¾İÀàĞÍÎ´Öª£¬Ö±½Ó±àÒëÆ÷¾Ü¾ø·ÃÎÊ
-//	//cout << "cptrµÄÊä³ö£º" << cptr << endl;
-//	//cout << "×ª»»ÀàĞÍºóµÄÊä³ö£º" << (void *)cptr << endl;
+//	//voidæŒ‡å‘çš„æ•°æ®ç±»å‹æœªçŸ¥ï¼Œç›´æ¥ç¼–è¯‘å™¨æ‹’ç»è®¿é—®
+//	//cout << "cptrçš„è¾“å‡ºï¼š" << cptr << endl;
+//	//cout << "è½¬æ¢ç±»å‹åçš„è¾“å‡ºï¼š" << (void *)cptr << endl;
 //	*/
 //}
+//void out(int = 5);
+//void out(int&);
+//void out(int, int);
+//int main() {
+//	int a = 10;
+//	int& b = a;
+//	out(10);
+//	out(b);
+//}
+//void out(int a ) {
+//	cout << a;
+//}
+//void out(int& a) {
+//	cout << a + 2;
+//}
+//void out(int a , int b ) {
+//	cout << a + b;
+//}
+//å‡½æ•°çš„é‡è½½
+/*
+void sort(int nums[], int len) {
+	cout << "æ’åºå‰ï¼š";
+	for (int i = 0; i < len; i++) {
+		cout  << nums[i] << "\t";
+	}
+	cout << endl;
+	for (int i = 0; i < len-1; i++) {
+		for (int j = i+1; j < len ; j++) {
+			if (nums[i] > nums[j]) {
+				int temp;
+				temp = nums[j];
+				nums[j] = nums[i];
+				nums[i] = temp;
+			}
+		}
+	}
+	cout << "æ’åºåï¼š";
+	for (int i = 0; i < len; i++) {
+		cout  << nums[i] << "\t";
+	}
+	cout << endl;
+}
+void sort(float nums[], int len) {
+	cout << "æ’åºå‰ï¼š";
+	for (int i = 0; i < len; i++) {
+		cout << nums[i] << "\t";
+	}
+	cout << endl;
+	for (int i = 0; i < len - 1; i++) {
+		for (int j = i + 1; j < len; j++) {
+			if (nums[i] > nums[j]) {
+				float temp;
+				temp = nums[j];
+				nums[j] = nums[i];
+				nums[i] = temp;
+			}
+		}
+	}
+	cout << "æ’åºåï¼š";
+	for (int i = 0; i < len; i++) {
+		cout << nums[i] << "\t";
+	}
+	cout << endl;
+}
+void sort(double nums[], int len) {
+	cout << "æ’åºå‰ï¼š";
+	for (int i = 0; i < len; i++) {
+		cout << nums[i] << "\t";
+	}
+	cout << endl;
+	for (int i = 0; i < len - 1; i++) {
+		for (int j = i + 1; j < len; j++) {
+			if (nums[i] > nums[j]) {
+				double temp;
+				temp = nums[j];
+				nums[j] = nums[i];
+				nums[i] = temp;
+			}
+		}
+	}
+	cout << "æ’åºåï¼š";
+	for (int i = 0; i < len; i++) {
+		cout << nums[i] << "\t";
+	}
+	cout << endl;
+}
+*/
+int main() {
+	int nums[] = { 23,11,44,25,55 };
+	float numsT[] = { 23,14.12,1243.3,12,23132 };
+	double numsTh[] = { 45.235,2,13242,4,6.346,11,246 };
+	sort(numsT, length(numsT));
+	sort(nums, length(nums));
+	sort(numsTh, length(numsTh));
+}
+
+//å‡½æ•°æ¨¡æ¿
+template<typename T>
+void sort(T nums[], int len) {
+	cout << "æ’åºå‰ï¼š";
+	for (int i = 0; i < len; i++) {
+		cout << nums[i] << "\t";
+	}
+	cout << endl;
+	for (int i = 0; i < len - 1; i++) {
+		for (int j = i + 1; j < len; j++) {
+			if (nums[i] > nums[j]) {
+				double temp;
+				temp = nums[j];
+				nums[j] = nums[i];
+				nums[i] = temp;
+			}
+		}
+	}
+	cout << "æ’åºåï¼š";
+	for (int i = 0; i < len; i++) {
+		cout << nums[i] << "\t";
+	}
+	cout << endl;
+}
