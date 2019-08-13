@@ -19,7 +19,16 @@
 //}
 
 int main() {
-	
+	//Âß¼­Óë»ò
+	int a = 1, b = 2, c = 0,d;
+	d= !a && !b || !c;
+	cout << d << endl;
+
+
+
+
+
+
 	/*int x, y;
 	scanf_s("x=%d,y=%d", &x, &y);
 	printf_s("x+y=%d", x + y);*/
