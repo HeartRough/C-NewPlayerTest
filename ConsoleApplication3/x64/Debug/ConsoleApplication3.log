@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 ﻿NiuKeOne.cpp : fatal error LNK1107: 文件无效或损坏: 无法在 0x6BF 处读取
+=======
+﻿  ZhiZhen.cpp
+  ConsoleApplication3.vcxproj -> D:\C\ConsoleApplication3\C-NewPlayerTest\ConsoleApplication3\x64\Debug\ConsoleApplication3.exe
+>>>>>>> parent of 577ae59... ptr
