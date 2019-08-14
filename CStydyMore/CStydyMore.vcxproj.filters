@@ -23,7 +23,7 @@
     <ClCompile Include="pch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CStydyMore.cpp">
+    <ClCompile Include="NewArbitraryArray.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
