@@ -26,5 +26,8 @@
     <ClCompile Include="NewArbitraryArray.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="function.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
