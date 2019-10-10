@@ -36,13 +36,5 @@ vector<vector<int>> newIntArr(const int hang, const int lie) {
 	return arrT;
 }
 
-//求和函数
-//template <typename T>T add(T a,T b) {
-//	return a + b;
-//}
 
-//数组长度函数
-//template <typename T>
-//int length(T& arr) {
-//	return sizeof(arr) / sizeof(arr[0]);
-//}
+

@@ -1,11 +1,2 @@
 ﻿  NewArbitraryArray.cpp
-D:\C++_github\CStydyMore\pch.h(22,1): error C2297:  “%”: 非法，右操作数包含“T”类型
-D:\C++_github\CStydyMore\pch.h(22,1): error C2297:         with
-D:\C++_github\CStydyMore\pch.h(22,1): error C2297:         [
-D:\C++_github\CStydyMore\pch.h(22,1): error C2297:             T=double
-D:\C++_github\CStydyMore\pch.h(22,1): error C2297:         ]
-D:\C++_github\CStydyMore\NewArbitraryArray.cpp(47): message :  查看对正在编译的函数 模板 实例化“T random<double>(T,T)”的引用
-D:\C++_github\CStydyMore\NewArbitraryArray.cpp(47): message :         with
-D:\C++_github\CStydyMore\NewArbitraryArray.cpp(47): message :         [
-D:\C++_github\CStydyMore\NewArbitraryArray.cpp(47): message :             T=double
-D:\C++_github\CStydyMore\NewArbitraryArray.cpp(47): message :         ]
+  CStydyMore.vcxproj -> D:\C++_github\CStydyMore\Debug\CStydyMore.exe
