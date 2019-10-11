@@ -1,7 +1,5 @@
 #include "pch.h"
-#include <iostream>
-using namespace std;
+
 int main(){
-    cout<<">>";
-    helloWorld();
+	cout<<"over!But questions have not been solved!";
 }
