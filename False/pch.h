@@ -4,7 +4,7 @@ using namespace std;
 #include <vector>
 #include <math.h>//基础数学函数
 #include "windows.h"//控制台管理
-#include <string>//字符串的输入
+#include <cstring>//字符串的输入
 #include <ctime>//随机数函数
 #include <iomanip>    //用于固定cin\cout的格式 
 #include <algorithm>//算法
