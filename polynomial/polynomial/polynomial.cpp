@@ -1,11 +1,17 @@
 ﻿// polynomial.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 
-#include <iostream>
+#include "pch.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	int aCoeffidient[] = { 1,2,3,4,3,2,1 };
+	int aIndex[] = { 2,1,3,3,1,2,1 };
+	int length = 7;
+	polynomial A( aCoeffidient, aIndex, length, length);
+	A.Display();
+	cout << "XiGou?" << endl;
+
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
