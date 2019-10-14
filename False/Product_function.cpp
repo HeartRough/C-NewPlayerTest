@@ -3,31 +3,31 @@
 Product::Product(const char *name){
     if(name){
         productName=new char[strlen(name)+1];
-        strcpy(productName,name);
+        strcpy_s(productName,strlen(name)+1,name);
     }
 }
 Product::Product(const char *name,int price){
     if(name){
         productName=new char[strlen(name)+1];
-        strcpy(productName,name);
+        strcpy_s(productName,strlen(name)+1,name);
     }
     productPrice=price;
 }
 Product::Product(const char* name,int price,const char* time){
     if(name){
         productName=new char[strlen(name)+1];
-        strcpy(productName,name);
+        strcpy_s(productName,strlen(name)+1,name);
     }
     if(time){
-        producterName=new char[strlen(time)+1];
-        strcpy(productTime,time);
+        productTime=new char[strlen(time)+1];
+        strcpy_s(productTime,strlen(time)+1,time);
     }
     productPrice=price;
 }
 void Product::setProductName(const char *name){
     if(name){
         productName=new char[strlen(name)+1];
-        strcpy(productName,name);
+        strcpy_s(productName,strlen(name)+1,name);
     }
 }
 void Product::setProductPrice(int price){
@@ -36,13 +36,13 @@ void Product::setProductPrice(int price){
 void Product::setProductTime(const char*time){
     if(time){
         productTime=new char[strlen(time)+1];
-        strcpy(productTime,time);
+        strcpy_s(productTime,strlen(time)+1,time);
     }
 }
 void Product::setProducterName(const char* erName){
     if(erName){
         producterName=new char[strlen(erName)+1];
-        strcpy(producterName,erName);
+        strcpy_s(producterName,strlen(erName)+1,erName);
     }
 }
 void Product::setEasyToBad(bool easy){
@@ -51,7 +51,7 @@ void Product::setEasyToBad(bool easy){
 void Product::setProductCanBeUsedTo(const char* canBeUsedTo){
     if(canBeUsedTo){
         productCanBeUsedTo=new char[strlen(canBeUsedTo)+1];
-        strcpy(productCanBeUsedTo,canBeUsedTo);
+        strcpy_s(productCanBeUsedTo,strlen(canBeUsedTo)+1,canBeUsedTo);
     }
 }
 char *Product::getProductName(){
@@ -72,9 +72,17 @@ bool Product::getEasyToBad(){
 char *Product::getProductCanBeUsedTo(){
     return productCanBeUsedTo;
 }
-void Product::Display(){
-    cout<<"Product:\t"<<getProductName()<<"\t"<<getProductPrice()<<"\t"<<getProductTime()<<"\n";
-    // cout<<getProducterName()<<"\t"<<getProductCanBeUsedTo()<<"\t"<<getEasyToBad()<<endl;
+void Product::Display() {
+	if (productName && getProductTime() && getProductPrice())
+		cout << "Product:\t" << getProductName() << "\t" << getProductTime() << "\t" << getProductPrice();
+	else if (productName && getProductTime())
+		cout << "Product:\t" << getProductName() << "\t" << getProductTime();
+	else if(productName&&getProductPrice())
+		cout << "Product:\t" << getProductName() << "\t" << getProductPrice();
+	else if (productName)
+		cout << "Product:\t" << getProductName();
+	// cout<<getProducterName()<<"\t"<<getProductCanBeUsedTo()<<"\t"<<getEasyToBad()<<endl;
+	cout << "\n";
 }
 Product::~Product(){
     if(productName){
