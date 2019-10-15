@@ -1,5 +1,5 @@
 #ifndef _Product
-#define _product
+#define _Product
 
 #include <iostream>
 #include <cstring>

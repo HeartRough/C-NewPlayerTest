@@ -9,8 +9,14 @@ int main()
 	int aIndex[] = { 2,1,3,3,1,2,1 };
 	int length = 7;
 	polynomial A( aCoeffidient, aIndex, length, length);
+	cout << "Before sort:";
 	A.Display();
-	cout << "XiGou?" << endl;
+	cout << endl;
+	cout << "After sort:";
+	A.sort();
+	A.Display();
+	cout << endl;
+	
 
 }
 

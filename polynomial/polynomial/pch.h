@@ -10,8 +10,8 @@ public:
 	polynomial(const int*, const int*,int,int);//构造函数
 	int* getCoefficient();//得到系数指针
 	int* getIndex();//得到指数指针
-	void setaLength();
-	void setbLength();
+	void setaLength(int);//设置系数数组长度
+	void setbLength(int);//设置指针数组长度
 	void sort();//排序
 	void mergeDuplicate();//合并重复元素
 	void Display();//输出多项式
@@ -39,6 +39,12 @@ int* polynomial::getCoefficient() {
 int* polynomial::getIndex() {
 	return index;
 }
+void polynomial::setaLength(int length) {
+	aLength = length;
+}
+void polynomial::setbLength(int length) {
+	bLength = length;
+}
 void polynomial::sort() {
 	int changeIndex;
 	int changeCoefficient;
@@ -57,17 +63,36 @@ void polynomial::sort() {
 		}
 	}
 }
+void polynomial::mergeDuplicate() {
+
+}
 void polynomial::Display() {
 	for (int i = 0; i < aLength; i++) {
+		if (i == aLength-1) {
+			if (*(getIndex()+i) == 0) {
+				 cout << *(getCoefficient() + i)  ;
+				 continue;
+			}
+			if(*(getIndex() + i) == 1) {
+				cout << *(getCoefficient() + i) << "x";
+				continue;
+			}
+			cout<< *(getCoefficient() + i) << "x^" << *(getIndex() + i) ;
+			continue;
+		}
+		if (*(getIndex() + i) == 1) {
+			cout << *(getCoefficient() + i) << "x"<<"+";
+			continue;
+		}
 		cout << *(getCoefficient() + i) << "x^" << *(getIndex() + i)<<"+";
 	}
 	cout << endl;
 }
 polynomial::~polynomial() {
-	
+	if (coefficient) {
 		delete[]coefficient;
-	
-	
-		delete[]coefficient;
-	
+	}
+	if (index) {
+		delete[]index;
+	}
 }
