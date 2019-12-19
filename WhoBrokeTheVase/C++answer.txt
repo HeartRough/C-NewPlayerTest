@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int jia, yi, bing, ding;
+	bool a, b, c, d;
+	jia = yi = bing = ding = 0;
+	jia = 1;
+	for (int i = 1; i <= 4; i++) {
+		if (i == 1)jia = 1;
+		if (i == 2) {
+			jia = 0;
+			yi = 1;
+		}
+		if (i == 3) {
+			yi = 0;
+			bing = 1;
+		}
+		if (i == 4) {
+			bing = 0;
+			ding = 1;
+		}
+
+		a = (yi == 0) == (ding == 1);
+		b = (yi == 0) == (bing == 1);
+		c = (jia == 0) == (yi == 1);
+		d = (ding == 0);
+
+		if (a && b && c && d) {
+			if (i == 1) cout << "甲打碎花瓶" << endl;
+			if (i == 2) cout << "乙打碎花瓶" << endl;
+			if (i == 3) cout << "丙打碎花瓶" << endl;
+			if (i == 4) cout << "丁打碎花瓶" << endl;
+		}
+	}
+	
+}

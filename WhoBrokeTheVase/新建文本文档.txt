@@ -1,0 +1,69 @@
+编写程序exp5_6.c，请判断花瓶是谁打碎的。教师花瓶碎了，班级只有四个小同学，老师询问小同学，已知是其中1人打碎的，还知道4人中每个人要么是诚实的，要么总是说谎的。
+小同学回答老师的问题是：
+甲说：“乙没有打碎，是丁打碎的。”
+乙说：“我没有打碎，是丙打碎的。”
+丙说：“甲没有打碎，是乙打碎的。”
+丁说：“我没有打碎。”
+根据四人回答判断谁打碎了花瓶。
+实验解答：
+①源程序exp5_6.c的源代码如下： 
+#include <stdio.h>
+#define yes 1
+#define no 0
+int main(void) {
+	int a, b, c, d;//甲乙丙丁是否打破花瓶，打破为yes,没打破为no;
+	int a0, b0, c0, d0;//甲乙丙丁是否撒谎，撒谎为0，诚实为1;
+	for (a0 = 0; a0 <= 1; a0++) {
+		for (b0 = 0; b0 <= 1; b0++) {
+			for (c0 = 0; c0 <= 1; c0++) {
+				for (d0 = 0; d0 <= 1; d0++) {
+					if (a0==d0||a0==c0||b0==c0)
+						continue;
+
+					if (a0) {
+						b = no;
+						d = yes;
+					}
+					else {
+						b = yes;
+						d = no;
+					}
+					if (b0) {
+						b = no;
+						c = yes;
+					}
+					else
+					{
+						b = yes;
+						c = no;
+					}
+					if (c0) {
+						a = no;
+						b = yes;
+					}
+					else {
+						a = yes;
+						b = no;
+					}
+					if (d0)
+						d = no;
+					else
+						d = yes;
+					if (a + b + c + d == yes) {
+						if (a)
+							printf("甲打碎了花瓶");
+						if (b)
+							printf("乙打碎了花瓶");
+						if (c)
+							printf("丙打碎了花瓶");
+						if (d)
+							printf("丁打碎了花瓶");
+					}
+				}
+			}
+		}
+	}
+	return 0;
+}
+②运行结果是：乙打碎了花瓶
+ 
